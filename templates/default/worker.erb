@@ -1,0 +1,9 @@
+[program:worker-campaigns-1]
+command = /usr/bin/php /home/rhino/code/horntell/core/artisan queue:work --queue=campaigns --sleep=2 --tries=2 --env=production --daemon --memory=100
+numprocs = 5
+process_name = %(program_name)s_%(process_num)d
+user = rhino
+autostart = true
+autorestart = true
+stdout_logfile = /var/log/supervisor/worker-campaigns-1.log
+stderr_logfile = /var/log/supervisor/worker-campaigns-1.log

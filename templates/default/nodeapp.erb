@@ -1,0 +1,8 @@
+[program:<%= @app_name %>]
+command = /usr/bin/node <%= @app_path %>
+user = ubuntu
+autostart = true
+autorestart = true
+stdout_logfile = /var/log/supervisor/<%= @app_name %>.log
+stderr_logfile = /var/log/supervisor/<%= @app_name %>.log
+environment = APP_ENV="<%= @app_env %>"
