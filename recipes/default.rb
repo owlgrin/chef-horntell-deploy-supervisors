@@ -22,7 +22,7 @@ workers = {
 }
 
 workers.each { |worker, count|
-    template "/etc/supervisor/conf.d/#{worker}.conf" do
+    template "/etc/supervisor/conf.d/worker-#{worker}.conf" do
     	source 'worker.erb'
     	variables({
     		:worker_name => worker,
