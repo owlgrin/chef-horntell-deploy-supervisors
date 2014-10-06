@@ -17,7 +17,7 @@ workers.each { |worker, count|
     	source 'worker.erb'
     	variables({
     		:worker_name => worker,
-    		:worker_count => count
+    		:worker_count => count,
     		:worker_env => 'production'
     	})
     end
