@@ -1,5 +1,5 @@
 [program:worker-<%= @worker_name %>]
-command = /usr/bin/php /home/ubuntu/apps/core/artisan queue:<% @worker_listen ? 'listen' : 'work' %> --queue=<% defined?($worker_queue) ? @worker_queue : @worker_name %> --sleep=2 --tries=2 --env=<% defined?(@worker_env) ? @worker_env : 'production' %> --daemon --memory=100
+command = /usr/bin/php /home/ubuntu/apps/core/artisan queue:<%= @worker_listen ? 'listen' : 'work' %> --queue=<%= defined?($worker_queue) ? @worker_queue : @worker_name %> --sleep=2 --tries=2 --env=<%= defined?(@worker_env) ? @worker_env : 'production' %> --daemon --memory=100
 numprocs = <%= @worker_count %>
 process_name = %(program_name)s_%(process_num)d
 user = ubuntu
