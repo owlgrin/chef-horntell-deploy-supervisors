@@ -22,14 +22,14 @@ workers = {
 }
 
 workers.each { |worker, count|
-    template "/etc/supervisor/conf.d/worker-#{worker}.conf" do
-    	source 'worker.erb'
-    	variables({
-    		:worker_name => worker,
-    		:worker_count => count,
-    		:worker_listen => (worker == 'default')
-    	})
-    end
+	template "/etc/supervisor/conf.d/worker-#{worker}.conf" do
+		source 'worker.erb'
+		variables({
+			:worker_name => worker,
+			:worker_count => count,
+			:worker_listen => (worker == 'default')
+		})
+	end
 }
 
 execute 'reloading supervisor' do
