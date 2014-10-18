@@ -1,10 +1,10 @@
 # horntell-supervisors-cookbook
 
-TODO: Enter the cookbook description here.
+Deploys the Horntell Supervisor workers on production.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu.
 
 ## Attributes
 
