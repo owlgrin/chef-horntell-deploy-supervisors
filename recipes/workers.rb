@@ -18,7 +18,7 @@ workers.each { |worker, count|
 		variables({
 			:worker_name => worker,
 			:worker_count => count,
-			:worker_listen => (worker == 'default' || worker == 'mailets')
+			:worker_listen => (worker == 'default')
 		})
 	end
 }
