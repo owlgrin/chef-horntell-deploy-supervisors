@@ -37,6 +37,8 @@ Include `horntell-supervisors` in your node's `run_list`:
 }
 ```
 
+Other recipes included in the cookbook are `web` and `workers`.
+
 ## License and Authors
 
 Author:: Mohit Mamoria (mohit.mamoria@gmail.com)
