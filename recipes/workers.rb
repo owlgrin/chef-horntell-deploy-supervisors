@@ -18,7 +18,7 @@ workers.each { |worker, count|
 		variables({
 			:worker_name => worker,
 			:worker_count => count,
-			:worker_listen => (worker == 'default')
+			:worker_listen => (worker == 'default') # if default queue, we will listen to it because of the bug that occurs when sending mails
 		})
 	end
 }
