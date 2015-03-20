@@ -1,15 +1,12 @@
 workers = {
-	'activities' => 1,
 	'default' => 1,
 	'events' => 1,
-	'hornlets' => 1,
-	'horns' => 1,
-	'mailets' => 1,
-	'mails' => 1,
+	'hornlets' => 2,
+	'horns' => 2,
 	'profiles' => 1,
 	'responses' => 1,
-	'campaigns' => 5,
-	'segments' => 5
+	'campaigns' => 2,
+	'segments' => 2
 }
 
 workers.each { |worker, count|

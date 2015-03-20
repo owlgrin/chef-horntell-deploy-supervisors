@@ -4,5 +4,5 @@ maintainer_email 'YOUR_EMAIL'
 license          'All rights reserved'
 description      'Installs/Configures horntell-supervisors'
 long_description 'Installs/Configures horntell-supervisors'
-version          '0.1.8'
+version          '0.1.9'
 
