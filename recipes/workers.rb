@@ -4,6 +4,7 @@ workers = {
 	'hornlets' => 2,
 	'horns' => 2,
 	'profiles' => 1,
+	'users' => 1,
 	'responses' => 1,
 	'campaigns' => 2,
 	'segments' => 2
