@@ -4,7 +4,7 @@ workers = {
 
 workers.each { |worker, count|
 	template "/etc/supervisor/conf.d/worker-apps-#{worker}.conf" do
-		source 'worker.erb'
+		source 'apps-worker.erb'
 		variables({
 			:repo_name => 'apps',
 			:worker_name => "apps:#{worker}",

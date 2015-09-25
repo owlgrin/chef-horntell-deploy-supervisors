@@ -1,0 +1,9 @@
+[program:worker-<%= @worker_name %>]
+command = /usr/bin/php /home/ubuntu/apps/<%= @repo_name %>/artisan queue:<%= @worker_listen ? 'listen' : 'work' %> --queue=<%= defined?($worker_queue) ? @worker_queue : @worker_name %> --sleep=2 --tries=2 --env=<%= defined?(@worker_env) ? @worker_env : 'production' %> <%= @worker_listen ? '' : '--daemon' %> --memory=100
+numprocs = <%= @worker_count %>
+process_name = %(program_name)s_%(process_num)d
+user = ubuntu
+autostart = true
+autorestart = true
+stdout_logfile = /var/log/supervisor/worker-<%= @worker_name %>.log
+stderr_logfile = /var/log/supervisor/worker-<%= @worker_name %>.log
