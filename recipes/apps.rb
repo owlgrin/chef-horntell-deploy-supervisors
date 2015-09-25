@@ -7,7 +7,8 @@ workers.each { |worker, count|
 		source 'worker.erb'
 		variables({
 			:repo_name => 'apps',
-			:worker_name => "apps:#{worker}",
+			:worker_name => "apps-#{worker}",
+			:worker_queue => "apps:#{worker}",
 			:worker_count => count,
 			:worker_listen => false
 		})
